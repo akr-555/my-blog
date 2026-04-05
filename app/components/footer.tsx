@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <>
       <div className="border-t border-[#e5e5e5] py-4 text-center text-xs text-[#9ca3af]" style={{ backgroundColor: "#f8f9fa" }}>
-        ⚡ このサイトはWordPressではなく、Sanity + Next.js + Vercel という最新のシステムで構築・公開しています
+        ⚡ このサイトはWordPress (従来のCMS) ではなく、Sanity (ヘッドレスCMS) + Vercel という仕組みで構築・公開しています
       </div>
       <footer className="border-t border-white/10 text-white" style={{ backgroundColor: "#1e3a5f" }}>
       <div className="max-w-6xl mx-auto px-6 py-12">
