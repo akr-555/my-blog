@@ -16,7 +16,7 @@ function formatDate(iso?: string) {
 
 function Hero() {
   return (
-    <section className="border-b border-[var(--gray-border)] bg-[var(--foreground)] text-white overflow-hidden relative">
+    <section className="border-b border-[var(--gray-border)] bg-[var(--deep-navy)] text-white overflow-hidden relative">
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
@@ -108,7 +108,7 @@ function FeaturedPost({ post }: { post: Post }) {
           <div className="grid md:grid-cols-2 gap-0 rounded-2xl border border-[var(--gray-border)] overflow-hidden hover:border-[var(--foreground)] transition-colors">
             <div
               className="aspect-video md:aspect-auto relative flex items-center justify-center"
-              style={{ background: "var(--foreground)", minHeight: "240px" }}
+              style={{ background: "var(--deep-navy)", minHeight: "240px" }}
             >
               <div
                 className="absolute inset-0"
@@ -169,7 +169,7 @@ function CategoryFilter({ categories }: { categories: Category[] }) {
         <div className="flex gap-1.5 overflow-x-auto py-3">
           <Link
             href="/posts"
-            className="shrink-0 text-xs px-4 py-1.5 rounded-full transition-colors bg-[var(--foreground)] text-white"
+            className="shrink-0 text-xs px-4 py-1.5 rounded-full transition-colors bg-[var(--deep-navy)] text-white"
           >
             すべて
           </Link>
@@ -193,8 +193,7 @@ function PostCard({ post }: { post: Post }) {
     <Link href={`/posts/${post.slug.current}`} className="group block card-hover">
       <article className="h-full border border-[var(--gray-border)] rounded-xl overflow-hidden hover:border-[var(--foreground)] transition-colors flex flex-col">
         <div
-          className="aspect-video relative flex items-center justify-center"
-          style={{ background: "var(--gray-subtle)" }}
+          className="aspect-video relative flex items-center justify-center bg-[var(--gray-subtle)]"
         >
           <span
             className="text-4xl font-black tracking-tighter select-none opacity-[0.07]"
@@ -236,7 +235,7 @@ function PostCard({ post }: { post: Post }) {
 
 function Newsletter() {
   return (
-    <section id="newsletter" className="bg-[var(--foreground)] text-white">
+    <section id="newsletter" className="bg-[var(--deep-navy)] text-white">
       <div className="max-w-6xl mx-auto px-6 py-20 text-center">
         <span className="accent-line block mx-auto mb-8" />
         <h2 className="text-2xl md:text-3xl font-bold mb-4">

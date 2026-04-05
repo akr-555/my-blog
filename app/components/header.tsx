@@ -5,10 +5,7 @@ export function Header() {
     <header className="border-b border-[var(--gray-border)] bg-white sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-0.5">
-          <span className="text-lg font-bold tracking-widest text-[var(--foreground)]">ウェブ</span>
-          <span className="text-lg font-bold tracking-widest" style={{ color: "var(--accent)" }}>
-            タク
-          </span>
+          <span className="text-lg font-bold tracking-widest text-[var(--foreground)]">ウェブタク</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
