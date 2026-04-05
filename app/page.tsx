@@ -27,8 +27,8 @@ function Hero() {
           className="object-cover"
           priority
         />
-        {/* 軽いオーバーレイ（暗くなりすぎないよう 60% 程度） */}
-        <div className="absolute inset-0 bg-[var(--deep-navy)]/60" />
+        {/* 軽いオーバーレイ（25% 程度で画像をしっかり見せる） */}
+        <div className="absolute inset-0 bg-[var(--deep-navy)]/25" />
       </div>
       {/* グリッドパターン */}
       <div
