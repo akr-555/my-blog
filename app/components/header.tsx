@@ -7,13 +7,13 @@ export function Header() {
         {/* 左：ロゴ + キャッチコピー */}
         <Link href="/" className="flex items-center gap-3 shrink-0">
           <span className="text-2xl font-bold tracking-widest" style={{ color: "var(--foreground)" }}>ウェブタク</span>
-          <span className="hidden sm:block text-[11px] leading-snug border-l pl-3" style={{ color: "var(--gray-muted)", borderColor: "var(--gray-border)" }}>
-            AI・Web技術・便利ツールを<br />趣味目線で楽しく発信
+          <span className="hidden sm:block text-[11px] leading-snug border-l pl-3 whitespace-nowrap" style={{ color: "var(--gray-muted)", borderColor: "var(--gray-border)" }}>
+            AI・Web技術・便利ツールを趣味目線で楽しく発信
           </span>
         </Link>
 
         {/* 右：ナビ + Newsletter */}
-        <div className="hidden md:flex items-center gap-5">
+        <div className="hidden md:flex items-center gap-5 ml-auto">
           <nav className="flex items-center gap-5">
             <Link href="/posts" className="nav-link text-xs transition-colors" style={{ color: "var(--gray-muted)" }}>
               記事一覧
