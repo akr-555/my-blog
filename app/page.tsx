@@ -175,7 +175,7 @@ function FeaturedPost({ post }: { post: Post }) {
 
 function CategoryFilter({ categories }: { categories: Category[] }) {
   return (
-    <div className="border-b border-[var(--gray-border)] bg-white/90 backdrop-blur-md sticky top-16 z-40">
+    <div className="border-b border-[var(--gray-border)] bg-white/90 backdrop-blur-md sticky top-14 z-40">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex gap-1.5 overflow-x-auto py-3">
           <Link
