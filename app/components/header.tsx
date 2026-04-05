@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Header() {
   return (
-    <header className="bg-ui-bg border-b border-ui-border sticky top-0 z-50">
+    <header className="border-b border-ui-border sticky top-0 z-50" style={{ backgroundColor: '#f1f3f5' }}>
       <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between gap-8">
         {/* 左：ロゴ + キャッチコピー */}
         <Link href="/" className="flex items-center gap-3 shrink-0">
