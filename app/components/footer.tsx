@@ -2,7 +2,11 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 text-white" style={{ backgroundColor: "#1e3a5f" }}>
+    <>
+      <div className="border-t border-[#e5e5e5] py-4 text-center text-xs text-[#9ca3af]" style={{ backgroundColor: "#f8f9fa" }}>
+        ⚡ このサイトはWordPressではなく、Sanity + Next.js + Vercel という最新のシステムで構築・公開しています
+      </div>
+      <footer className="border-t border-white/10 text-white" style={{ backgroundColor: "#1e3a5f" }}>
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
@@ -36,5 +40,6 @@ export function Footer() {
         </div>
       </div>
     </footer>
+    </>
   );
 }
