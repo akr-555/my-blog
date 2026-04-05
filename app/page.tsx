@@ -26,7 +26,7 @@ function Hero() {
       }}
     >
       {/* オーバーレイ（25%）。hero.jpg がない場合は --deep-navy のみで表示 */}
-      <div className="absolute inset-0 z-0" style={{ backgroundColor: "rgba(30,58,95,0.25)" }} />
+      <div className="absolute inset-0 z-0" style={{ backgroundColor: "rgba(15,31,61,0.40)" }} />
       {/* グリッドパターン */}
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none z-[1]"
@@ -246,24 +246,25 @@ function PostCard({ post }: { post: Post }) {
 
 function Newsletter() {
   return (
-    <section id="newsletter" className="bg-[var(--deep-navy)] text-white">
+    <section id="newsletter" className="border-b border-[var(--gray-border)]" style={{ backgroundColor: "#f8f9fa" }}>
       <div className="max-w-6xl mx-auto px-6 py-20 text-center">
         <span className="accent-line block mx-auto mb-8" />
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: "var(--deep-navy)" }}>
           最新記事をニュースレターで受け取る
         </h2>
-        <p className="text-sm text-white/50 mb-8 max-w-md mx-auto">
+        <p className="text-sm mb-8 max-w-md mx-auto" style={{ color: "var(--gray-muted)" }}>
           週3回、厳選したテクノロジー情報をメールでお届けします。スパムなし、いつでも解除可能。
         </p>
         <form className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
           <input
             type="email"
             placeholder="your@email.com"
-            className="flex-1 px-4 py-3 rounded-full text-sm bg-white/10 border border-white/20 placeholder-white/30 text-white focus:outline-none focus:border-[var(--accent)]"
+            className="flex-1 px-4 py-3 rounded-full text-sm border border-[var(--gray-border)] bg-white placeholder-[var(--gray-muted)] focus:outline-none focus:border-[var(--accent)]"
+            style={{ color: "var(--foreground)" }}
           />
           <button
             type="submit"
-            className="px-6 py-3 rounded-full text-sm font-medium text-[var(--foreground)] hover:opacity-90 transition-opacity cursor-pointer"
+            className="px-6 py-3 rounded-full text-sm font-medium text-white hover:opacity-90 transition-opacity cursor-pointer"
             style={{ background: "var(--accent)" }}
           >
             登録する
