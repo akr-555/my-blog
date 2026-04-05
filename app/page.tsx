@@ -37,13 +37,16 @@ function Hero() {
         </div>
 
         <h1 className="animate-fade-up delay-200 text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6">
-          テクノロジーの最前線を、
+          ウェブテクノロジーに興味津々な
           <br />
-          <span style={{ color: "var(--accent)" }}>わかりやすく</span>届ける。
+          <span style={{ color: "var(--accent)" }}>オヤジ</span>が贈る、
+          <br />
+          実は便利で面白いWeb情報
         </h1>
 
         <p className="animate-fade-up delay-300 text-base md:text-lg text-white/60 max-w-xl leading-relaxed mb-10">
-          AI活用・最新のWeb技術・便利ツールについて、エンジニア視点で深掘りした記事を週3回更新しています。
+          AI活用・Web技術・便利ツールを
+          趣味目線で楽しく発信しています。
         </p>
 
         <div className="animate-fade-up delay-400 flex flex-wrap gap-4">

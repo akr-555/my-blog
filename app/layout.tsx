@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TECHLOG — AI・テクノロジー情報ブログ",
-  description: "AI活用・インターネット技術・便利ツールの最新情報を発信するブログ",
+  title: "ウェブタク — AI・Web技術情報ブログ",
+  description: "AI活用・Web技術・便利ツールを趣味目線で楽しく発信するブログ",
 };
 
 export default function RootLayout({
