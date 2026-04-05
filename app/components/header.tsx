@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Header() {
   return (
-    <header className="border-b border-white/10 bg-[var(--deep-navy)] sticky top-0 z-50">
+    <header className="border-b border-white/10 sticky top-0 z-50" style={{ backgroundColor: "#0f1f3d" }}>
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-0.5">
           <span className="text-lg font-bold tracking-widest text-white">ウェブタク</span>
