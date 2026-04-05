@@ -9,14 +9,14 @@ export function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
-          <Link href="/posts" className="nav-link text-sm font-light tracking-wider text-white/70 hover:text-white transition-colors">
+          <Link href="/posts" className="nav-link text-sm text-white/70 hover:text-white transition-colors">
             記事一覧
           </Link>
           {["About", "お問い合わせ"].map((item) => (
             <Link
               key={item}
               href="#"
-              className="nav-link text-sm font-light tracking-wider text-white/70 hover:text-white transition-colors"
+              className="nav-link text-sm text-white/70 hover:text-white transition-colors"
             >
               {item}
             </Link>

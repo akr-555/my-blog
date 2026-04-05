@@ -37,20 +37,20 @@ export default async function PostPage({
       <main className="flex-1">
         {/* Hero */}
         <div className="border-b border-[var(--gray-border)] bg-[var(--foreground)] text-white">
-          <div className="max-w-3xl mx-auto px-6 py-24 md:py-32">
+          <div className="max-w-3xl mx-auto px-6 py-16 md:py-20">
             {post.category && (
               <span
-                className="inline-block text-xs font-light px-3 py-1 rounded-full mb-8 tracking-wider"
+                className="inline-block text-xs font-semibold px-3 py-1 rounded-full mb-6"
                 style={{ background: "var(--accent-dim)", color: "var(--accent)" }}
               >
                 {post.category.title}
               </span>
             )}
-            <h1 className="text-3xl md:text-4xl font-light leading-snug tracking-wider mb-8">
+            <h1 className="text-3xl md:text-4xl font-bold leading-snug mb-6">
               {post.title}
             </h1>
             {post.excerpt && (
-              <p className="text-base text-white/60 mb-10">{post.excerpt}</p>
+              <p className="text-base text-white/60 leading-relaxed mb-8">{post.excerpt}</p>
             )}
             <div className="flex items-center gap-4 text-sm text-white/40">
               {post.publishedAt && <span>{formatDate(post.publishedAt)}</span>}
@@ -65,9 +65,9 @@ export default async function PostPage({
         </div>
 
         {/* Body */}
-        <div className="max-w-3xl mx-auto px-6 py-24">
+        <div className="max-w-3xl mx-auto px-6 py-16">
           {post.body ? (
-            <div className="text-base">
+            <div className="text-base leading-relaxed">
               <PortableTextBody value={post.body} />
             </div>
           ) : (
@@ -76,7 +76,7 @@ export default async function PostPage({
 
           {/* Author */}
           {post.author && (
-            <div className="mt-20 pt-12 border-t border-[var(--gray-border)]">
+            <div className="mt-16 pt-10 border-t border-[var(--gray-border)]">
               <div className="flex items-start gap-4">
                 <div
                   className="w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-bold text-white"
@@ -119,7 +119,7 @@ export default async function PostPage({
           )}
 
           {/* Back link */}
-          <div className="mt-16">
+          <div className="mt-12">
             <Link
               href="/posts"
               className="inline-flex items-center gap-2 text-sm text-[var(--gray-muted)] hover:text-[var(--foreground)] transition-colors"

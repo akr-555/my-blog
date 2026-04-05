@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8f9fa;
+  --background: #eef2f7;
   --foreground: #1a2744;
   --deep-navy: #1e3a5f;
   --accent: #3b82f6;
   --accent-dim: rgba(59, 130, 246, 0.1);
-  --gray-subtle: #f8f9fa;
-  --gray-border: #e5e5e5;
+  --gray-subtle: #eef2f7;
+  --gray-border: #dde4ed;
   --gray-muted: #6b7280;
 }
 
@@ -17,14 +17,14 @@
   --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-noto: var(--font-noto-sans-jp);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), var(--font-noto-sans-jp), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
-  line-height: 1.95;
 }
 
 @keyframes fade-up {

@@ -36,7 +36,7 @@ function Hero() {
           backgroundSize: "60px 60px",
         }}
       />
-      <div className="max-w-6xl mx-auto px-6 py-32 md:py-44 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 relative z-10">
         <div className="animate-fade-up delay-100 inline-flex items-center gap-3 mb-8">
           <span className="accent-line" />
           <span
@@ -47,7 +47,7 @@ function Hero() {
           </span>
         </div>
 
-        <h1 className="animate-fade-up delay-200 text-4xl md:text-6xl font-light leading-tight tracking-wider mb-8">
+        <h1 className="animate-fade-up delay-200 text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6">
           ウェブテクノロジーに興味津々な
           <br />
           <span style={{ color: "var(--accent)" }}>オヤジ</span>が贈る、
@@ -55,7 +55,7 @@ function Hero() {
           実は便利で面白いWeb情報
         </h1>
 
-        <p className="animate-fade-up delay-300 text-base md:text-lg text-white/60 max-w-xl mb-12">
+        <p className="animate-fade-up delay-300 text-base md:text-lg text-white/60 max-w-xl leading-relaxed mb-10">
           AI活用・Web技術・便利ツールを
           趣味目線で楽しく発信しています。
         </p>
@@ -85,7 +85,7 @@ function Hero() {
           </Link>
         </div>
 
-        <div className="animate-fade-up delay-500 flex gap-12 mt-20 pt-12 border-t border-white/10">
+        <div className="animate-fade-up delay-500 flex gap-10 mt-16 pt-10 border-t border-white/10">
           {[
             { value: "120+", label: "記事数" },
             { value: "月8,000", label: "PV" },
@@ -107,10 +107,10 @@ function Hero() {
 function FeaturedPost({ post }: { post: Post }) {
   return (
     <section className="border-b border-[var(--gray-border)]" id="articles">
-      <div className="max-w-6xl mx-auto px-6 py-20">
-        <div className="flex items-center gap-3 mb-12">
+      <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="flex items-center gap-3 mb-10">
           <span className="accent-line" />
-          <h2 className="text-xs font-light tracking-widest uppercase text-[var(--gray-muted)]">
+          <h2 className="text-xs font-semibold tracking-widest uppercase text-[var(--gray-muted)]">
             Featured
           </h2>
         </div>
@@ -136,22 +136,22 @@ function FeaturedPost({ post }: { post: Post }) {
               </span>
             </div>
 
-            <div className="p-10 md:p-14 bg-[var(--gray-subtle)] flex flex-col justify-center">
+            <div className="p-8 md:p-10 bg-[var(--gray-subtle)] flex flex-col justify-center">
               {post.category && (
                 <span
-                  className="inline-block text-xs font-light px-3 py-1 rounded-full mb-6 self-start tracking-wider"
+                  className="inline-block text-xs font-semibold px-3 py-1 rounded-full mb-5 self-start"
                   style={{ background: "var(--accent-dim)", color: "var(--accent)" }}
                 >
                   {post.category.title}
                 </span>
               )}
 
-              <h3 className="text-xl md:text-2xl font-light leading-snug tracking-wider mb-5 group-hover:underline decoration-[var(--accent)] underline-offset-4">
+              <h3 className="text-xl md:text-2xl font-bold leading-snug mb-4 group-hover:underline decoration-[var(--accent)] underline-offset-4">
                 {post.title}
               </h3>
 
               {post.excerpt && (
-                <p className="text-sm text-[var(--gray-muted)] mb-10">
+                <p className="text-sm text-[var(--gray-muted)] leading-relaxed mb-8">
                   {post.excerpt}
                 </p>
               )}
@@ -214,22 +214,22 @@ function PostCard({ post }: { post: Post }) {
           </span>
         </div>
 
-        <div className="p-6 flex flex-col flex-1">
+        <div className="p-5 flex flex-col flex-1">
           {post.category && (
             <span
-              className="inline-block text-xs font-light px-2.5 py-0.5 rounded-full mb-4 self-start tracking-wide"
+              className="inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3 self-start"
               style={{ background: "var(--accent-dim)", color: "var(--accent)" }}
             >
               {post.category.title}
             </span>
           )}
 
-          <h3 className="text-sm font-normal leading-snug tracking-wide mb-4 group-hover:underline decoration-[var(--accent)] underline-offset-2 flex-1">
+          <h3 className="text-sm font-semibold leading-snug mb-3 group-hover:underline decoration-[var(--accent)] underline-offset-2 flex-1">
             {post.title}
           </h3>
 
           {post.excerpt && (
-            <p className="text-xs text-[var(--gray-muted)] line-clamp-2 mb-5">
+            <p className="text-xs text-[var(--gray-muted)] leading-relaxed line-clamp-2 mb-4">
               {post.excerpt}
             </p>
           )}
@@ -246,13 +246,13 @@ function PostCard({ post }: { post: Post }) {
 
 function Newsletter() {
   return (
-    <section id="newsletter" className="border-b border-[var(--gray-border)]" style={{ backgroundColor: "#f8f9fa" }}>
-      <div className="max-w-6xl mx-auto px-6 py-28 text-center">
-        <span className="accent-line block mx-auto mb-10" />
-        <h2 className="text-2xl md:text-3xl font-light tracking-wider mb-5" style={{ color: "var(--deep-navy)" }}>
+    <section id="newsletter" className="border-b border-[var(--gray-border)]" style={{ backgroundColor: "var(--background)" }}>
+      <div className="max-w-6xl mx-auto px-6 py-20 text-center">
+        <span className="accent-line block mx-auto mb-8" />
+        <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: "var(--deep-navy)" }}>
           最新記事をニュースレターで受け取る
         </h2>
-        <p className="text-sm mb-10 max-w-md mx-auto" style={{ color: "var(--gray-muted)" }}>
+        <p className="text-sm mb-8 max-w-md mx-auto" style={{ color: "var(--gray-muted)" }}>
           週3回、厳選したテクノロジー情報をメールでお届けします。スパムなし、いつでも解除可能。
         </p>
         <form className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
@@ -292,11 +292,11 @@ export default async function Home() {
         {featured && <FeaturedPost post={featured} />}
         <CategoryFilter categories={categories} />
         <section className="border-b border-[var(--gray-border)]">
-          <div className="max-w-6xl mx-auto px-6 py-20">
-            <div className="flex items-center justify-between mb-12">
+          <div className="max-w-6xl mx-auto px-6 py-16">
+            <div className="flex items-center justify-between mb-10">
               <div className="flex items-center gap-3">
                 <span className="accent-line" />
-                <h2 className="text-xs font-light tracking-widest uppercase text-[var(--gray-muted)]">
+                <h2 className="text-xs font-semibold tracking-widest uppercase text-[var(--gray-muted)]">
                   Latest Articles
                 </h2>
               </div>

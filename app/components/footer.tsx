@@ -3,11 +3,11 @@ import Link from "next/link";
 export function Footer() {
   return (
     <>
-      <div className="border-t border-[#e5e5e5] py-4 text-center text-xs text-[#9ca3af]" style={{ backgroundColor: "#f8f9fa" }}>
+      <div className="border-t border-[var(--gray-border)] py-4 text-center text-xs text-[#9ca3af]" style={{ backgroundColor: "var(--background)" }}>
         ⚡ このサイトはWordPress (従来のCMS) ではなく、Sanity (ヘッドレスCMS) + Vercel という仕組みで構築・公開しています
       </div>
       <footer className="border-t border-white/10 text-white" style={{ backgroundColor: "#1e3a5f" }}>
-      <div className="max-w-6xl mx-auto px-6 py-16">
+      <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <div className="flex items-center gap-0.5 mb-2">
@@ -34,7 +34,7 @@ export function Footer() {
           </nav>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/40">
+        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/40">
           <span>© 2025 ウェブタク. All rights reserved.</span>
           <span>Built with Next.js + Sanity + Vercel</span>
         </div>
