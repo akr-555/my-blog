@@ -7,7 +7,7 @@ export function Footer() {
         ⚡ このサイトはWordPress (従来のCMS) ではなく、Sanity (ヘッドレスCMS) + Vercel という仕組みで構築・公開しています
       </div>
       <footer className="border-t border-white/10 text-white" style={{ backgroundColor: "#1e3a5f" }}>
-      <div className="max-w-6xl mx-auto px-6 py-12">
+      <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <div className="flex items-center gap-0.5 mb-2">
@@ -34,7 +34,7 @@ export function Footer() {
           </nav>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/40">
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/40">
           <span>© 2025 ウェブタク. All rights reserved.</span>
           <span>Built with Next.js + Sanity + Vercel</span>
         </div>

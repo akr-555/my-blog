@@ -30,22 +30,22 @@ function PostCard({ post }: { post: Post }) {
           </span>
         </div>
 
-        <div className="p-5 flex flex-col flex-1">
+        <div className="p-6 flex flex-col flex-1">
           {post.category && (
             <span
-              className="inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3 self-start"
+              className="inline-block text-xs font-light px-2.5 py-0.5 rounded-full mb-4 self-start tracking-wide"
               style={{ background: "var(--accent-dim)", color: "var(--accent)" }}
             >
               {post.category.title}
             </span>
           )}
 
-          <h2 className="text-sm font-semibold leading-snug mb-3 group-hover:underline decoration-[var(--accent)] underline-offset-2 flex-1">
+          <h2 className="text-sm font-normal leading-snug tracking-wide mb-4 group-hover:underline decoration-[var(--accent)] underline-offset-2 flex-1">
             {post.title}
           </h2>
 
           {post.excerpt && (
-            <p className="text-xs text-[var(--gray-muted)] leading-relaxed line-clamp-2 mb-4">
+            <p className="text-xs text-[var(--gray-muted)] line-clamp-2 mb-5">
               {post.excerpt}
             </p>
           )}
@@ -71,14 +71,14 @@ export default async function PostsPage() {
       <Header />
       <main className="flex-1">
         <div className="border-b border-[var(--gray-border)] bg-[var(--gray-subtle)]">
-          <div className="max-w-6xl mx-auto px-6 py-14">
-            <div className="inline-flex items-center gap-3 mb-4">
+          <div className="max-w-6xl mx-auto px-6 py-20">
+            <div className="inline-flex items-center gap-3 mb-5">
               <span className="accent-line" />
-              <span className="text-xs font-semibold tracking-widest uppercase text-[var(--gray-muted)]">
+              <span className="text-xs font-light tracking-widest uppercase text-[var(--gray-muted)]">
                 All Articles
               </span>
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold">記事一覧</h1>
+            <h1 className="text-3xl md:text-4xl font-light tracking-wider">記事一覧</h1>
           </div>
         </div>
 
@@ -106,7 +106,7 @@ export default async function PostsPage() {
           </div>
         )}
 
-        <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="max-w-6xl mx-auto px-6 py-20">
           {posts.length > 0 ? (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {posts.map((post) => (
