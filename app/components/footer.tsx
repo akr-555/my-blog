@@ -2,27 +2,27 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="border-t border-[var(--gray-border)]">
+    <footer className="border-t border-white/10 text-white" style={{ backgroundColor: "#1e3a5f" }}>
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <div className="flex items-center gap-0.5 mb-2">
-              <span className="font-bold tracking-widest text-sm text-[var(--foreground)]">ウェブタク</span>
+              <span className="font-bold tracking-widest text-sm text-white">ウェブタク</span>
             </div>
-            <p className="text-xs text-[var(--gray-muted)]">
+            <p className="text-xs text-white/60">
               AI・Web技術・便利ツールを趣味目線で楽しく発信
             </p>
           </div>
 
           <nav className="flex flex-wrap gap-6">
-            <Link href="/posts" className="text-xs text-[var(--gray-muted)] hover:text-[var(--foreground)] transition-colors">
+            <Link href="/posts" className="text-xs text-white/60 hover:text-white transition-colors">
               記事一覧
             </Link>
             {["About", "プライバシーポリシー", "お問い合わせ"].map((item) => (
               <Link
                 key={item}
                 href="#"
-                className="text-xs text-[var(--gray-muted)] hover:text-[var(--foreground)] transition-colors"
+                className="text-xs text-white/60 hover:text-white transition-colors"
               >
                 {item}
               </Link>
@@ -30,7 +30,7 @@ export function Footer() {
           </nav>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-[var(--gray-border)] flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[var(--gray-muted)]">
+        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/40">
           <span>© 2025 ウェブタク. All rights reserved.</span>
           <span>Built with Next.js + Sanity + Vercel</span>
         </div>

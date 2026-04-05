@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { client } from "@/sanity/lib/client";
 import { postsQuery, categoriesQuery } from "@/sanity/lib/queries";
@@ -17,19 +16,17 @@ function formatDate(iso?: string) {
 
 function Hero() {
   return (
-    <section className="border-b border-[var(--gray-border)] text-white overflow-hidden relative">
-      {/* 背景画像 */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/hero.jpg"
-          alt=""
-          fill
-          className="object-cover"
-          priority
-        />
-        {/* 軽いオーバーレイ（25% 程度で画像をしっかり見せる） */}
-        <div className="absolute inset-0 bg-[var(--deep-navy)]/25" />
-      </div>
+    <section
+      className="border-b border-[var(--gray-border)] text-white overflow-hidden relative"
+      style={{
+        backgroundImage: "url('/hero.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundColor: "var(--deep-navy)",
+      }}
+    >
+      {/* オーバーレイ（25%）。hero.jpg がない場合は --deep-navy のみで表示 */}
+      <div className="absolute inset-0 z-0" style={{ backgroundColor: "rgba(30,58,95,0.25)" }} />
       {/* グリッドパターン */}
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none z-[1]"
