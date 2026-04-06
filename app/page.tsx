@@ -21,7 +21,7 @@ function Hero() {
       style={{
         backgroundImage: "url('/hero.jpg')",
         backgroundSize: "cover",
-        backgroundPosition: "center top",
+        backgroundPosition: "center bottom",
         backgroundColor: "var(--deep-navy)",
       }}
     >
