@@ -106,7 +106,7 @@ function Hero() {
 
 function FeaturedPost({ post }: { post: Post }) {
   return (
-    <section className="border-b border-[var(--gray-border)]" id="articles">
+    <section id="articles">
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="flex items-center gap-3 mb-10">
           <span className="accent-line" />
