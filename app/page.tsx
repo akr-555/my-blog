@@ -84,21 +84,6 @@ function Hero() {
             About
           </Link>
         </div>
-
-        <div className="animate-fade-up delay-1200 flex gap-10 mt-16 pt-10 border-t border-white/10">
-          {[
-            { value: "120+", label: "記事数" },
-            { value: "月8,000", label: "PV" },
-            { value: "2023", label: "創刊" },
-          ].map(({ value, label }) => (
-            <div key={label}>
-              <div className="text-2xl font-bold" style={{ color: "var(--accent)" }}>
-                {value}
-              </div>
-              <div className="text-xs text-white/40 mt-1">{label}</div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
