@@ -48,7 +48,7 @@ function Hero() {
         </div>
 
         <h1 className="animate-fade-up delay-700 text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6">
-          Webテクノロジーに魅せられた
+          ウェブの世界に魅せられた
           <br />
           <span style={{ color: "var(--accent)" }}>オヤジ</span>が贈る、
           <br />
