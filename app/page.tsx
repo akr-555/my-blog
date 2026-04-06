@@ -21,7 +21,7 @@ function Hero() {
       style={{
         backgroundImage: "url('/hero.jpg')",
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "center 30%",
         backgroundColor: "var(--deep-navy)",
       }}
     >
@@ -36,7 +36,7 @@ function Hero() {
           backgroundSize: "60px 60px",
         }}
       />
-      <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 py-16 md:py-24 relative z-10">
         <div className="animate-fade-up delay-500 inline-flex items-center gap-3 mb-8">
           <span className="accent-line" />
           <span
