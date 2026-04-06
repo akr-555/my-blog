@@ -48,7 +48,7 @@ function Hero() {
         </div>
 
         <h1 className="animate-fade-up delay-700 text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6">
-          ウェブテクノロジーに興味津々な
+          Webテクノロジーに興味津々な
           <br />
           <span style={{ color: "var(--accent)" }}>オヤジ</span>が贈る、
           <br />
@@ -60,7 +60,7 @@ function Hero() {
           趣味目線で楽しく発信しています。
         </p>
 
-        <div className="animate-fade-up delay-1100 flex flex-wrap gap-4">
+        <div className="animate-fade-up delay-1100 flex flex-wrap gap-4 justify-center">
           <Link
             href="/posts"
             className="inline-flex items-center gap-2 px-10 py-3 rounded-full font-medium text-sm text-[var(--foreground)] hover:opacity-90 transition-opacity"
