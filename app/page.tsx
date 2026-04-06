@@ -240,7 +240,7 @@ export default async function Home() {
       <main className="flex-1">
         <Hero />
         <div className="bg-white py-3 text-center text-xs" style={{ color: "var(--gray-muted)" }}>
-          このサイトはWordPress（従来のCMS）ではなく Sanity（ヘッドレスCMS）+ Vercel という仕組みで構築・公開しています。
+          このサイトはWordPress(従来のCMS)ではなく、Sanity(ヘッドレスCMS)+ Vercel という仕組みで構築・公開しています。
         </div>
         {featured && <FeaturedPost post={featured} />}
         <section className="border-b border-[var(--gray-border)]">
