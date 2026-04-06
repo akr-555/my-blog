@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { client } from "@/sanity/lib/client";
-import { postsQuery, categoriesQuery } from "@/sanity/lib/queries";
-import type { Post, Category } from "@/sanity/lib/types";
+import { postsQuery } from "@/sanity/lib/queries";
+import type { Post } from "@/sanity/lib/types";
 import { Header } from "@/app/components/header";
 import { Footer } from "@/app/components/footer";
 
@@ -173,31 +173,6 @@ function FeaturedPost({ post }: { post: Post }) {
   );
 }
 
-function CategoryFilter({ categories }: { categories: Category[] }) {
-  return (
-    <div className="border-b border-[var(--gray-border)] bg-white/90 backdrop-blur-md sticky top-16 z-40">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="flex gap-1.5 overflow-x-auto py-3">
-          <Link
-            href="/posts"
-            className="shrink-0 text-xs px-4 py-1.5 rounded-full transition-colors bg-[var(--deep-navy)] text-white"
-          >
-            すべて
-          </Link>
-          {categories.map((cat) => (
-            <Link
-              key={cat._id}
-              href={`/posts?category=${cat.slug.current}`}
-              className="shrink-0 text-xs px-4 py-1.5 rounded-full transition-colors text-[var(--gray-muted)] hover:text-[var(--foreground)] hover:bg-[var(--gray-subtle)]"
-            >
-              {cat.title}
-            </Link>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
 
 function PostCard({ post }: { post: Post }) {
   return (
@@ -276,10 +251,7 @@ function Newsletter() {
 }
 
 export default async function Home() {
-  const [posts, categories] = await Promise.all([
-    client.fetch<Post[]>(postsQuery),
-    client.fetch<Category[]>(categoriesQuery),
-  ]);
+  const posts = await client.fetch<Post[]>(postsQuery);
 
   const featured = posts.find((p) => p.featured) ?? posts[0];
   const rest = featured ? posts.filter((p) => p._id !== featured._id) : posts;
@@ -290,7 +262,6 @@ export default async function Home() {
       <main className="flex-1">
         <Hero />
         {featured && <FeaturedPost post={featured} />}
-        <CategoryFilter categories={categories} />
         <section className="border-b border-[var(--gray-border)]">
           <div className="max-w-6xl mx-auto px-6 py-16">
             <div className="flex items-center justify-between mb-10">
