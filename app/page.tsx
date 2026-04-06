@@ -63,7 +63,7 @@ function Hero() {
         <div className="animate-fade-up delay-1100 flex flex-wrap gap-4">
           <Link
             href="/posts"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm text-[var(--foreground)] hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-2 px-10 py-3 rounded-full font-medium text-sm text-[var(--foreground)] hover:opacity-90 transition-opacity"
             style={{ background: "var(--accent)" }}
           >
             記事を読む
@@ -76,12 +76,6 @@ function Hero() {
                 strokeLinejoin="round"
               />
             </svg>
-          </Link>
-          <Link
-            href="#"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm border border-white/20 hover:border-white/60 transition-colors"
-          >
-            About
           </Link>
         </div>
       </div>
