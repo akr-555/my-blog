@@ -221,9 +221,8 @@ function PostCard({ post }: { post: Post }) {
 
 function Newsletter() {
   return (
-    <section id="newsletter" className="border-b border-[var(--gray-border)]" style={{ backgroundColor: "var(--background)" }}>
+    <section id="newsletter" style={{ backgroundColor: "var(--background)" }}>
       <div className="max-w-6xl mx-auto px-6 py-20 text-center">
-        <span className="accent-line block mx-auto mb-8" />
         <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: "var(--deep-navy)" }}>
           最新記事をニュースレターで受け取る
         </h2>
