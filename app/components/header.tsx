@@ -29,7 +29,7 @@ export function Header() {
             </Link>
           </nav>
           <Link
-            href="#newsletter"
+            href="/#newsletter"
             className="inline-flex items-center gap-2 text-xs font-medium border px-3 py-1.5 rounded-full transition-colors"
             style={{ borderColor: "rgba(255,255,255,0.4)", color: "#ffffff" }}
           >
