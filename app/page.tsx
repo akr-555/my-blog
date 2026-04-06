@@ -37,7 +37,7 @@ function Hero() {
         }}
       />
       <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 relative z-10">
-        <div className="animate-fade-up delay-100 inline-flex items-center gap-3 mb-8">
+        <div className="animate-fade-up delay-300 inline-flex items-center gap-3 mb-8">
           <span className="accent-line" />
           <span
             className="text-xs font-semibold tracking-widest uppercase"
@@ -47,7 +47,7 @@ function Hero() {
           </span>
         </div>
 
-        <h1 className="animate-fade-up delay-200 text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6">
+        <h1 className="animate-fade-up delay-500 text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6">
           ウェブテクノロジーに興味津々な
           <br />
           <span style={{ color: "var(--accent)" }}>オヤジ</span>が贈る、
@@ -55,12 +55,12 @@ function Hero() {
           実は便利で面白いWeb情報
         </h1>
 
-        <p className="animate-fade-up delay-300 text-base md:text-lg text-white/60 max-w-xl leading-relaxed mb-10">
+        <p className="animate-fade-up delay-700 text-base md:text-lg text-white/60 max-w-xl leading-relaxed mb-10">
           AI活用・Web技術・便利ツールを
           趣味目線で楽しく発信しています。
         </p>
 
-        <div className="animate-fade-up delay-400 flex flex-wrap gap-4">
+        <div className="animate-fade-up delay-900 flex flex-wrap gap-4">
           <Link
             href="/posts"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm text-[var(--foreground)] hover:opacity-90 transition-opacity"
@@ -85,7 +85,7 @@ function Hero() {
           </Link>
         </div>
 
-        <div className="animate-fade-up delay-500 flex gap-10 mt-16 pt-10 border-t border-white/10">
+        <div className="animate-fade-up delay-1000 flex gap-10 mt-16 pt-10 border-t border-white/10">
           {[
             { value: "120+", label: "記事数" },
             { value: "月8,000", label: "PV" },
