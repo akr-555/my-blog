@@ -60,11 +60,11 @@ function Hero() {
           趣味目線で楽しく発信しています。
         </p>
 
-        <div className="animate-fade-up delay-1100 flex flex-wrap gap-4">
+        <div className="animate-fade-up delay-1100 flex justify-center">
           <Link
             href="/posts"
-            className="inline-flex items-center gap-2 px-10 py-3 rounded-full font-medium text-sm text-[var(--foreground)] hover:opacity-90 transition-opacity"
-            style={{ background: "var(--accent)" }}
+            className="inline-flex items-center gap-2 px-16 py-3 rounded-full font-medium text-sm text-white hover:opacity-90 transition-opacity"
+            style={{ background: "#f97316" }}
           >
             記事を読む
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
