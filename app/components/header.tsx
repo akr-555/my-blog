@@ -18,16 +18,15 @@ export function Header() {
             <Link href="/posts" className="nav-link text-xs transition-colors" style={{ color: "rgba(255,255,255,0.8)" }}>
               記事一覧
             </Link>
-            {["About", "プライバシーポリシー", "お問い合わせ"].map((item) => (
-              <Link
-                key={item}
-                href="#"
-                className="nav-link text-xs transition-colors"
-                style={{ color: "rgba(255,255,255,0.8)" }}
-              >
-                {item}
-              </Link>
-            ))}
+            <Link href="#" className="nav-link text-xs transition-colors" style={{ color: "rgba(255,255,255,0.8)" }}>
+              About
+            </Link>
+            <Link href="/privacy-policy" className="nav-link text-xs transition-colors" style={{ color: "rgba(255,255,255,0.8)" }}>
+              プライバシーポリシー
+            </Link>
+            <Link href="/contact" className="nav-link text-xs transition-colors" style={{ color: "rgba(255,255,255,0.8)" }}>
+              お問い合わせ
+            </Link>
           </nav>
           <Link
             href="#newsletter"
