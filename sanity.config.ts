@@ -19,6 +19,7 @@ export default defineConfig({
     structureTool({
       structure: (S) =>
         S.list()
+          .id("root")
           .title("コンテンツ")
           .items([
             S.documentTypeListItem("post").id("post").title("記事"),
