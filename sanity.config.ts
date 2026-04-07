@@ -21,9 +21,9 @@ export default defineConfig({
         S.list()
           .title("コンテンツ")
           .items([
-            S.documentTypeListItem("post").title("記事"),
-            S.documentTypeListItem("category").title("カテゴリー"),
-            S.documentTypeListItem("author").title("著者"),
+            S.documentTypeListItem("post").id("post").title("記事"),
+            S.documentTypeListItem("category").id("category").title("カテゴリー"),
+            S.documentTypeListItem("author").id("author").title("著者"),
             S.divider(),
             S.listItem()
               .title("サイト設定")
