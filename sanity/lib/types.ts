@@ -25,6 +25,10 @@ export type Author = {
   githubUrl?: string;
 };
 
+export type SiteSettings = {
+  heroImage?: SanityImage;
+};
+
 export type Post = {
   _id: string;
   title: string;

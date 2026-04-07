@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { client } from "@/sanity/lib/client";
-import { postsQuery } from "@/sanity/lib/queries";
-import type { Post } from "@/sanity/lib/types";
+import { postsQuery, siteSettingsQuery } from "@/sanity/lib/queries";
+import { urlFor } from "@/sanity/lib/image";
+import type { Post, SiteSettings } from "@/sanity/lib/types";
 import { Header } from "@/app/components/header";
 import { Footer } from "@/app/components/footer";
 
@@ -15,7 +16,7 @@ function formatDate(iso?: string) {
   });
 }
 
-function Hero() {
+function Hero({ heroImageUrl }: { heroImageUrl: string }) {
   return (
     <section
       className="border-b border-[var(--gray-border)] text-white overflow-hidden relative"
@@ -23,11 +24,11 @@ function Hero() {
     >
       {/* ヒーロー背景画像（priority で最優先読み込み） */}
       <Image
-        src="/hero.jpg"
+        src={heroImageUrl}
         alt=""
         fill
         priority
-        sizes="100vw"
+        sizes="(max-width: 768px) 768px, (max-width: 1280px) 1280px, 1920px"
         style={{ objectFit: "cover", objectPosition: "center 70%" }}
         className="z-0"
       />
@@ -235,7 +236,14 @@ function Newsletter() {
 }
 
 export default async function Home() {
-  const posts = await client.fetch<Post[]>(postsQuery);
+  const [posts, settings] = await Promise.all([
+    client.fetch<Post[]>(postsQuery),
+    client.fetch<SiteSettings | null>(siteSettingsQuery),
+  ]);
+
+  const heroImageUrl = settings?.heroImage
+    ? urlFor(settings.heroImage).width(1920).url()
+    : "/hero.jpg";
 
   const featured = posts.find((p) => p.featured) ?? posts[0];
   const rest = featured ? posts.filter((p) => p._id !== featured._id) : posts;
@@ -244,7 +252,7 @@ export default async function Home() {
     <>
       <Header />
       <main className="flex-1">
-        <Hero />
+        <Hero heroImageUrl={heroImageUrl} />
         <div className="bg-white py-3 text-center text-xs" style={{ color: "var(--gray-muted)" }}>
           このサイトはWordPress(従来のCMS)ではなく、Sanity(ヘッドレスCMS)+ Vercel という仕組みで構築・公開しています。
         </div>

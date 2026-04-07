@@ -74,3 +74,10 @@ export const categoriesQuery = groq`
 export const postSlugsQuery = groq`
   *[_type == "post" && defined(slug.current)] { "slug": slug.current }
 `;
+
+// サイト設定（シングルトン）
+export const siteSettingsQuery = groq`
+  *[_type == "siteSettings" && _id == "siteSettings"][0] {
+    heroImage
+  }
+`;

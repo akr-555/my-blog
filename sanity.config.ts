@@ -16,7 +16,25 @@ export default defineConfig({
     types: schemaTypes,
   },
   plugins: [
-    structureTool(),
+    structureTool({
+      structure: (S) =>
+        S.list()
+          .title("コンテンツ")
+          .items([
+            S.documentTypeListItem("post").title("記事"),
+            S.documentTypeListItem("category").title("カテゴリー"),
+            S.documentTypeListItem("author").title("著者"),
+            S.divider(),
+            S.listItem()
+              .title("サイト設定")
+              .id("siteSettings")
+              .child(
+                S.document()
+                  .schemaType("siteSettings")
+                  .documentId("siteSettings")
+              ),
+          ]),
+    }),
     visionTool({ defaultApiVersion: "v2025-01-01" }),
     codeInput(),
   ],
