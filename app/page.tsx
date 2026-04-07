@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 import { postsQuery } from "@/sanity/lib/queries";
 import type { Post } from "@/sanity/lib/types";
@@ -18,15 +19,20 @@ function Hero() {
   return (
     <section
       className="border-b border-[var(--gray-border)] text-white overflow-hidden relative"
-      style={{
-        backgroundImage: "url('/hero.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center 70%",
-        backgroundColor: "var(--deep-navy)",
-      }}
+      style={{ backgroundColor: "var(--deep-navy)" }}
     >
-      {/* オーバーレイ（25%）。hero.jpg がない場合は --deep-navy のみで表示 */}
-      <div className="absolute inset-0 z-0" style={{ backgroundColor: "rgba(15,31,61,0.40)" }} />
+      {/* ヒーロー背景画像（priority で最優先読み込み） */}
+      <Image
+        src="/hero.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        style={{ objectFit: "cover", objectPosition: "center 70%" }}
+        className="z-0"
+      />
+      {/* オーバーレイ（40%）。hero.jpg がない場合は --deep-navy のみで表示 */}
+      <div className="absolute inset-0 z-[1]" style={{ backgroundColor: "rgba(15,31,61,0.40)" }} />
       {/* グリッドパターン */}
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none z-[1]"
