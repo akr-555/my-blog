@@ -253,9 +253,6 @@ export default async function Home() {
       <Header />
       <main className="flex-1">
         <Hero heroImageUrl={heroImageUrl} />
-        <div className="bg-white py-3 text-center text-xs" style={{ color: "var(--gray-muted)" }}>
-          このサイトはWordPress(従来のCMS)ではなく、Sanity(ヘッドレスCMS)+ Vercel という仕組みで構築・公開しています。
-        </div>
         {featured && <FeaturedPost post={featured} />}
         <section className="border-b border-[var(--gray-border)]">
           <div className="max-w-6xl mx-auto px-6 py-16">

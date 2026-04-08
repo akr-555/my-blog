@@ -8,9 +8,6 @@ export function Footer() {
         <span className="text-xs" style={{ color: "rgba(255,255,255,0.65)" }}>
           © 2026 ウェブタク. All rights reserved.
         </span>
-        <span className="text-xs" style={{ color: "rgba(255,255,255,0.65)" }}>
-          このサイトはSanity + Next.js + Vercelで構築しています
-        </span>
       </div>
     </footer>
   );
