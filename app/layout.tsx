@@ -22,6 +22,9 @@ const notoSansJP = Noto_Sans_JP({
 export const metadata: Metadata = {
   title: "ウェブタク — AI・Web技術情報ブログ",
   description: "AI活用・Web技術・便利ツールを趣味目線で楽しく発信するブログ",
+  verification: {
+    google: "8FPtA4tT6KsCcZ3HEUFgpugY03HMuOed5J9eUcE-lfI",
+  },
 };
 
 export default function RootLayout({
